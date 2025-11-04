@@ -83,22 +83,33 @@
             <h1 class="text-4xl my-4 font-semibold">Adopt  Your  Best Friend</h1>
             <p class="text-gray-500 text-sm mb-12">It is a long established fact that a reader will be distracted by the readable content of a page <br> when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
             <div id="btnContainer" class="mb-8 grid lg:grid-cols-4 grid-cols-2 lg:gap-4 gap-2 items-center ">
-
+              
             </div>
           <div class="flex justify-between items-center mb-5">
             <h2 class="text-2xl font-semibold">Best Deal For you</h2>
-            <button class="btn bg-green-800 text-white rounded-xl px-7">Sort by Price</button>
+            <button id="sortBtn" class="btn bg-green-800 text-white rounded-xl px-7">Sort by Price</button>
           </div>
-          <div class="grid grid-cols-4 gap-5">
+          <div class="grid grid-cols-4 md:gap-3.5 lg:gap-4 gap-2.5">
             <div id="cardContainer" class="col-span-3 p-3 grid lg:grid-cols-3 md:grid-cols-2 gap-3 border-t-2">
               
             </div>
 
-            <div class="col-span-1 rounded-2xl p-3 shadow-lg grid grid-cols-2">
-              
+            <div  class=" col-span-1 rounded-2xl p-3 shadow-lg">
+              <div id="imgContainer" class="gap-1  grid md:grid-cols-2">
+
+              </div>
             </div>
           </div>
         </section>
+        <!-- countDown -->
+         <section id="countContainer">
+      <!-- Open the modal using ID.showModal() method -->
+          <!-- <button class="btn" onclick="my_modal_2.showModal()">open modal</button> -->
+           <dialog id="modal1" class="modal p-3">
+            
+            
+          </dialog>
+         </section>
     </main>
 <!-- </footer> -->
 <footer class="bg-black text-neutral-content">
