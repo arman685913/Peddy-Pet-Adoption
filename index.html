@@ -67,7 +67,7 @@
         </nav>
 
     </header>
-    <main class="max-w-7xl mx-auto mt-2 px-3">
+    <main class="max-w-7xl mx-auto mt-2 md:px-3 px-2">
         <!-- banner Section -->
         <section class="text-center font-medium">
             <p class="text-gray-500 lg:text-2xl text-xl font-medium lg:my-3">Bringing Families Together</p>
@@ -89,8 +89,12 @@
             <h2 class="text-2xl font-semibold">Best Deal For you</h2>
             <button id="sortBtn" class="btn bg-green-800 text-white rounded-xl px-7">Sort by Price</button>
           </div>
-          <div class="grid grid-cols-4 md:gap-3.5 lg:gap-4 gap-2.5">
-            <div id="cardContainer" class="col-span-3 p-3 grid lg:grid-cols-3 md:grid-cols-2 gap-3 border-t-2">
+          <div class="grid grid-cols-4 md:gap-3 lg:gap-3.5 gap-2">
+            <!--  -->
+            <!-- <div id="loadingContainer" class="">
+      </div> -->
+      <!--  -->
+            <div id="cardContainer" class="col-span-3 p-3 grid lg:grid-cols-3 md:grid-cols-2 md:gap-3 gap-2.5 border-t-2">
               
             </div>
 
@@ -103,13 +107,21 @@
         </section>
         <!-- countDown -->
          <section id="countContainer">
-      <!-- Open the modal using ID.showModal() method -->
-          <!-- <button class="btn" onclick="my_modal_2.showModal()">open modal</button> -->
+      <!-- countDown Modal -->
            <dialog id="modal1" class="modal p-3">
-            
             
           </dialog>
          </section>
+         <!-- countDown -->
+         <section id="countContainer">
+      <!-- d Modal -->
+           <dialog id="modal2" class="modal p-3">
+            
+          </dialog>
+         </section>
+    <!-- Loading part-->
+     <div id="loadingContainer" class="">
+      </div>
     </main>
 <!-- </footer> -->
 <footer class="bg-black text-neutral-content">
