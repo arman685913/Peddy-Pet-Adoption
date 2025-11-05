@@ -91,26 +91,33 @@
           </div>
           <div class="grid grid-cols-4 md:gap-3 lg:gap-3.5 gap-2">
 
-            <div id="loadingContainer" class="hidden col-span-3 p-3 min-h-svh border-t-2 lg:pt-64 md:pt-48 pt-36">
-                  <!-- Loading part-->
-                 <div  class="">
+            <div 
+              id="loadingContainer" 
+              class="hidden dark:border-2 col-span-3 p-3 md:min-h-[75vh] min-h-[50vh] border flex flex-col items-center justify-center text-center"
+            >
+              <!-- Loading part -->
+              <div>
+                <div class="flex flex-wrap justify-center gap-2">
                   <span class="loading loading-spinner text-primary"></span>
-                    <span class="loading loading-spinner text-secondary"></span>
-                    <span class="loading loading-spinner text-accent"></span>
-                    <span class="loading loading-spinner text-neutral"></span>
-                    <span class="loading loading-spinner text-info"></span>
-                    <span class="loading loading-spinner text-success"></span>
-                    <span class="loading loading-spinner text-warning"></span>
-                    <span class="loading loading-spinner text-error"></span>
-                    <h1 class="md:text-3xl text-xl my-4 font-bold">Lodding...</h1>
-                  </div>
+                  <span class="loading loading-spinner text-secondary"></span>
+                  <span class="loading loading-spinner text-accent"></span>
+                  <span class="loading loading-spinner text-neutral"></span>
+                  <span class="loading loading-spinner text-info"></span>
+                  <span class="loading loading-spinner text-success"></span>
+                  <span class="loading loading-spinner text-warning"></span>
+                  <span class="loading loading-spinner text-error"></span>
+                </div>
+                <h1 class="md:text-3xl text-xl my-4 font-bold">Loading...</h1>
+              </div>
             </div>
-            <div id="cardContainer" class="col-span-3 p-3 grid lg:grid-cols-3 md:grid-cols-2 md:gap-3 gap-2.5 border-t-2">
+
+            <!-- main card -->
+            <div id="cardContainer" class="col-span-3 p-3 grid lg:grid-cols-3 md:grid-cols-2 md:gap-3 gap-2.5 border border-t-2 dark:border-2">
               
             </div>
 
-            <div  class=" col-span-1 rounded-2xl p-3 shadow-lg">
-              <div id="imgContainer" class="gap-1  grid md:grid-cols-2">
+            <div  class=" col-span-1 rounded-2xl p-3 border border-t-2 shadow-lg dark:border-2">
+              <div id="imgContainer" class="gap-1 grid md:grid-cols-2">
 
               </div>
             </div>
