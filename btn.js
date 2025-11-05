@@ -61,6 +61,7 @@ const cardAll = () => {
 
 
 const displayCard = (pets) => {
+    loadingAdd()
     const cardContainer = document.getElementById('cardContainer');
     const imgContainer = document.getElementById('imgContainer');
     const countContainer = document.getElementById('modal1');
@@ -76,6 +77,7 @@ const displayCard = (pets) => {
                 <p class="text-gray-400 text-xs lg:text-base">It is a long established fact that a reader will be distracted...</p>
             </div>
         `;
+        loadingRemove();
         return;
     }
 
@@ -197,37 +199,38 @@ for (const pet of pets) {
     
     cardContainer.appendChild(card);
 }
-
+loadingRemove();
 };
 
 
 
 const handle = (category) =>{
-        loading()
+        
         const cardContainer = document.getElementById('cardContainer')
         cardContainer.innerHTML = ''
         remove()       
         add(category)
         byNamePets(category)
+        // loadingRemove()
     }
 
 //loading function
-const loading = () => {
+const loadingAdd = () => {
     const loadingContainer = document.getElementById('loadingContainer');
-    loadingContainer.innerHTML = `
-        <span class="loading loading-spinner text-primary"></span>
-        <span class="loading loading-spinner text-secondary"></span>
-        <span class="loading loading-spinner text-accent"></span>
-        <span class="loading loading-spinner text-neutral"></span>
-        <span class="loading loading-spinner text-info"></span>
-        <span class="loading loading-spinner text-success"></span>
-        <span class="loading loading-spinner text-warning"></span>
-        <span class="loading loading-spinner text-error"></span>
-    `
-    setTimeout(() => {
-        loadingContainer.innerHTML = '';
+    const cardContainer = document.getElementById('cardContainer');
+    loadingContainer.classList.remove('hidden')
+    cardContainer.classList.add('hidden')
+    
+}
+const loadingRemove = () => {
+    const loadingContainer = document.getElementById('loadingContainer');
+    const cardContainer = document.getElementById('cardContainer');
+    setInterval((n) => {  
+        loadingContainer.classList.add('hidden')
+        cardContainer.classList.remove('hidden')
+        clearInterval(n)
     }, 3000);
-    return loadingContainer;
+    
 }
 
 document.getElementById('sortBtn').addEventListener('click', () => {
